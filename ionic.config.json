@@ -1,0 +1,7 @@
+{
+  "name": "appsec",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
