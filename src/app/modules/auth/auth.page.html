@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="ion-padding" mode="ios">
+
+  <div class="container h-100 d-flex align-items-center">
+
+    <div class="m-1 w-100 mb-5">
+      <h1 class="text-center mb-4 fw-bold">APP SEC</h1>
+
+      <form [formGroup]="form">
+        <ion-input formControlName="dni" [min]="8" mode="md" type="number" class="mb-3"
+          label="Documento de identidad (DNI)" label-placement="floating" fill="solid"></ion-input>
+
+        <ion-button fill="outline" class="mb-3" expand="block">Detector DNI electrónico</ion-button>
+
+        <ion-button (click)="onSubmit()" expand="block">Empecemos</ion-button>
+      </form>
+
+    </div>
+
+  </div>
+
+</ion-content>

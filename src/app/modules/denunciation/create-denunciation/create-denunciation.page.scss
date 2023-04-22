@@ -1,0 +1,21 @@
+ion-modal.custom {
+    --width: fit-content;
+    --min-width: 100%;
+    --height: fit-content;
+    --border-radius: 0;
+    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+    align-items: end;
+}
+
+:host .picker-highlight {
+    background: red;
+}
+
+//   ion-modal#example-modal h1 {
+//     margin: 20px 20px 10px 20px;
+//   }
+
+
+//   ion-modal#example-modal .wrapper {
+//     margin-bottom: 10px;
+//   }

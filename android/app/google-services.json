@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "522065705144",
+    "project_id": "appsec-61172",
+    "storage_bucket": "appsec-61172.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522065705144:android:db55d7b4ca74d73f9e1c4d",
+        "android_client_info": {
+          "package_name": "com.appsec.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522065705144-hvas3u189iib3rufeo9m3ensrcgau8da.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg96cgJFxieoFSsP6vWMggf5RHQ8p9sZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522065705144-hvas3u189iib3rufeo9m3ensrcgau8da.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

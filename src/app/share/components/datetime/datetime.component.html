@@ -1,0 +1,8 @@
+<ion-datetime mode="ios" size="cover" [preferWheel]="true" hour-cycle="h12" [presentation]="presentation" #IonDatetime
+  (ionChange)="onChange(IonDatetime.value)">
+  <ion-buttons slot="buttons">
+    <div slot="start"></div>
+    <ion-button color="primary" (click)="onSelect()">Confirmar</ion-button>
+    <div slot="end"></div>
+  </ion-buttons>
+</ion-datetime>

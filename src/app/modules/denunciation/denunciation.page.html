@@ -1,0 +1,43 @@
+<app-menu menuTitle="Denuncias"></app-menu>
+<ion-content [fullscreen]="true" mode="ios">
+  <div class="px-3 mt-3 mb-4">
+    <ion-button expand="block" routerLink="/account/denunciation/create" fill="outline">Nueva denuncia</ion-button>
+  </div>
+
+  <!-- {{denunciationList | json}} -->
+
+
+  <ion-card *ngFor="let item of denunciationList" [routerLink]="'/account/denunciation/view/' + item.id">
+    <div class="wrap_card">
+      <div class="icon">
+        <img src="/assets/icon/doc.svg" alt="">
+      </div>
+      <div class="text">
+        <span class="stauts">En trámite</span>
+        <span class="title">Denuncia N° 87662</span>
+        <span class="date">{{item.dateEvent | date: 'dd/MM/yyyy'}}</span>
+      </div>
+      <div class="link">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </ion-card>
+
+
+  <!-- <ion-card routerLink="/account/denunciation/view">
+      <div class="wrap_card">
+        <div class="icon">
+          <img src="/assets/icon/doc.svg" alt="">
+        </div>
+        <div class="text">
+          <span class="stauts">En trámite</span>
+          <span class="title">Denuncia N° 87661</span>
+          <span class="date">10/04/2023</span>
+        </div>
+        <div class="link">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </ion-card> -->
+
+</ion-content>

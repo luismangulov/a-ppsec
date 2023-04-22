@@ -1,0 +1,40 @@
+<ion-menu contentId="main-content" side="end">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title slot="start">Menu</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeMenu()">
+          <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list lines="none" mode="md">
+      <ion-item lines="none" button="true" [routerLink]="'/'">
+        <ion-icon size="large" color="primary" name="log-out-outline" slot="start" class="icon_menu_custom"></ion-icon>
+        <ion-label>Cerrar sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon aria-hidden="true" name="home"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="denunciation">
+        <ion-icon aria-hidden="true" name="albums"></ion-icon>
+        <ion-label>Denuncias</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="news">
+        <ion-icon aria-hidden="true" name="newspaper"></ion-icon>
+        <ion-label>Noticias</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</div>

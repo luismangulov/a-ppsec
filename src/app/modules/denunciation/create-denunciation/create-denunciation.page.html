@@ -1,0 +1,52 @@
+<app-menu-default menuTitle="Nueva denuncia" defaultHref="/account/denunciation"></app-menu-default>
+
+<ion-content [fullscreen]="true" class="ion-padding" mode="ios">
+
+  <form [formGroup]="form">
+    <ion-input formControlName="profession" mode="md" class="mb-3 mt-3" label="Profesión" label-placement="floating"
+      fill="solid"></ion-input>
+
+    <div class="d-flex">
+      <ion-input [value]="dateEvent.value | date: 'dd/MM/yyyy'" formControlName="dateEvent" id="1681376241265" mode="md"
+        class="mb-3" [readonly]="true" label="Fecha del evento" label-placement="floating" fill="solid"></ion-input>
+
+      <ion-input [value]="timeEvent.value | date: 'shortTime'" formControlName="timeEvent" mode="md"
+        style="width: 150px" id="1681380521921" [readonly]="true" class="mb-3 ms-2" label="Hora"
+        label-placement="floating" fill="solid"></ion-input>
+    </div>
+
+    <ion-input formControlName="state" mode="md" class="mb-3" label="Estado" label-placement="floating"
+      fill="solid"></ion-input>
+    <ion-input formControlName="venueEvent" mode="md" class="mb-3" label="Lugar del evento" label-placement="floating"
+      fill="solid"></ion-input>
+
+
+    <ion-select formControlName="modality" mode="md" class="mb-3" label="Modalidad" label-placement="floating"
+      fill="solid">
+      <ion-select-option *ngFor="let val of modalityList" [value]="val.value">{{val.label}}</ion-select-option>
+    </ion-select>
+
+    <ion-input formControlName="observations" mode="md" class="mb-3" label="Circunstancias / observaciones"
+      label-placement="floating" fill="solid"></ion-input>
+
+    <ion-button (click)="onSubmit()" class="mb-3" [disabled]="loadingButton" expand="block">Enviar</ion-button>
+
+    <ion-button (click)="testclick($event)" class="mb-3" [disabled]="loadingButton" expand="block">test</ion-button>
+
+  </form>
+
+  <!-- {{form.value  | json}} -->
+
+  <ion-modal class="custom" #modal trigger="1681376241265">
+    <ng-template>
+      <app-datetime (onEvent)="onSetDate($event)"></app-datetime>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal class="custom" #modal trigger="1681380521921">
+    <ng-template>
+      <app-datetime (onEvent)="onSetTime($event)" presentation="time"></app-datetime>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

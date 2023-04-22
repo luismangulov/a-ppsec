@@ -1,0 +1,61 @@
+ion-input {
+  --background: #F5F5F5 !important;
+}
+ion-textarea {
+  --background: #F5F5F5 !important;
+}
+
+
+ion-card {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.wrap_card {
+  display: flex;
+  padding: 13px;
+  align-items: center;
+
+  & .icon {
+    flex: 0 0 auto;
+    width: 60px;
+  }
+
+  & .text {
+    flex: 1 1 auto;
+    margin-left: 7px;
+    color: #333333;
+
+    span {
+      display: block;
+    }
+
+    span[class="stauts"] {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 3px;
+    }
+
+    span[class="title"] {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 1px;
+    }
+
+    span[class="date"] {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  & .link {
+    flex: 0 0 auto;
+    width: 24px;
+    font-size: 24px;
+    color: #333333;
+
+  }
+}
