@@ -90,23 +90,23 @@ export class CreateDenunciationPage implements OnInit {
     this.timeEvent.setValue($ev);
   }
 
-  testclick($ev: any) {
+  // testclick($ev: any) {
 
-    const sendEmail : EmailParams = {
-      to: 'bysnark@live.com',
-      subject: 'hola que haces.',
-      body: "hola mundo",
-    }
+  //   const sendEmail : EmailParams = {
+  //     to: 'bysnark@live.com',
+  //     subject: 'hola que haces.',
+  //     body: "hola mundo",
+  //   }
 
-    const app = getApp();
-    const functions = getFunctions(app);
-    const myFunction = httpsCallable(functions, 'sendEmail');
-    myFunction(sendEmail).then(result => {
-      console.log(result);
-    }).catch(error => {
-      console.log(error)
-    })
-  }
+  //   const app = getApp();
+  //   const functions = getFunctions(app);
+  //   const myFunction = httpsCallable(functions, 'sendEmail');
+  //   myFunction(sendEmail).then(result => {
+  //     console.log(result);
+  //   }).catch(error => {
+  //     console.log(error)
+  //   })
+  // }
 
   async onSubmit() {
     if (this.form.invalid) {
@@ -124,7 +124,7 @@ export class CreateDenunciationPage implements OnInit {
       venueEvent: this.venueEvent.value,
       modality: this.modality.value,
       observations: this.observations.value,
-      numero: Math.floor(Math.random() * (87999 - 87000 + 1)) + 87000,
+      numero: parseInt(Date.now().toString().slice(0, 5)),
       status: StatusDenunciation.tramite
     });
 
@@ -163,14 +163,11 @@ export class CreateDenunciationPage implements OnInit {
             }).catch(error => {
               console.log(error)
             })
-        
-        
+
             this.denunciationService.addDenunciation({ ...denunciation, email }).then(res => {
               this.loadingButton = false;
               this.router.navigate(['/account/denunciation']);
             });
-
-
             
           }
         }],
@@ -192,7 +189,3 @@ export class CreateDenunciationPage implements OnInit {
   }
 
 }
-  function presentAlert() {
-    throw new Error('Function not implemented.');
-  }
-

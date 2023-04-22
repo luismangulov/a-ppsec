@@ -2,13 +2,14 @@ import * as functions from "firebase-functions";
 
 import * as admin from "firebase-admin";
 import * as sgMail from "@sendgrid/mail";
+import { environment } from "./environments/environment";
 
 // Inicializa la aplicación de administración de Firebase
 admin.initializeApp();
 
 // Configura la clave API de SendGrid
 sgMail.setApiKey(
-    "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"
+    environment.sendgrid
 );
 
 // Define la interfaz para los parámetros de la función
